@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+    user:
+        build: user
+        ports:
+            - "8082:8082"
+     
+    account:
+        build: accounts
+        ports:
+            - "8086:8086"
+     
+    balance:
+        build: demo
+        ports:
+            - "8084:8084"
+    
+    networks:
+        projects_default:
+        driver: bridge
+  
